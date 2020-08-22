@@ -7,7 +7,11 @@
 const fs = require('fs')
 const path = require('path')
 const eslint = require('eslint')
-const ruleNames = new Set(new eslint.Linter().getRules().keys())
+const ruleNames = new Set(
+  new eslint.Linter()
+    .getRules()
+    .keys()
+)
 
 const TYPINGS_ESLINT_RULES_ROOT = path.resolve(
   __dirname,
